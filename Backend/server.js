@@ -19,7 +19,11 @@ mongoose.connect(process.env.MONGO_URI, {
 
 
 
-app.use(cors());
+const corsOptions = {
+  origin: ['https://affiliate-clean.vercel.app'],
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 
 app.use('/auth' , authRoutes );
