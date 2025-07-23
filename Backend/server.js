@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 
 const corsOptions = {
-  origin : process.env.CLIENT_ENDPOINT ,  // 
+  origin : ['https://affiliate-clean.vercel.app', 'http://localhost:5173'],  // 
   credentials : true, //allow cookies to be sent
 }
 app.use(cors(corsOptions));
