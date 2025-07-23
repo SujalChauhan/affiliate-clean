@@ -18,11 +18,8 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(()=> console.log("MongoDB connected successfully"));
 
 
-const corsOptions = {
-  origin : ['https://affiliate-clean.vercel.app', 'http://localhost:5173'],  // 
-  credentials : true, //allow cookies to be sent
-}
-app.use(cors(corsOptions));
+
+app.use(cors());
 
 
 app.use('/auth' , authRoutes );
